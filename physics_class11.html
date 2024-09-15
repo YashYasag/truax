@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Class 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333333; /* Dark gray text */
+        }
+
+        header {
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-line {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* White text */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #357ABD; /* Darker blue */
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
+            border: none;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Smooth edges */
+        }
+
+        button:hover {
+            background-color: #357ABD; /* Darker blue */
+        }
+
+        .lecture-buttons {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        .lecture-buttons button {
+            background-color: #333333; /* Dark gray */
+            color: #ffffff; /* White text */
+        }
+
+        .lecture-buttons button:hover {
+            background-color: #555555; /* Lighter gray */
+        }
+
+        footer {
+            background-color: #4A90E2; /* Light blue */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Physics Class 11</h1>
+    </header>
+    <main>
+        <div class="buttons">
+            <button onclick="showLectures('unit-dimensions')">Unit Dimensions And Error</button>
+            <div id="unit-dimensions" class="lecture-buttons">
+                <button>Lecture 1</button>
+                <button>Lecture 2</button>
+                <button>Lecture 3</button>
+                <button>Lecture 4</button>
+                <button>Lecture 5</button>
+                <button>Lecture 6</button>
+                <button>Lecture 7</button>
+                <button>Lecture 8</button>
+            </div>
+            <button onclick="showLectures('vector')">Vector</button>
+            <div id="vector" class="lecture-buttons">
+                <button>Lecture 1</button>
+                <button>Lecture 2</button>
+                <button>Lecture 3</button>
+                <button>Lecture 4</button>
+                <button>Lecture 5</button>
+                <button>Lecture 6</button>
+                <button>Lecture 7</button>
+                <button>Lecture 8</button>
+                <button>Lecture 9</button>
+                <button>Lecture 10</button>
+                <button>Lecture 11</button>
+                <button>Lecture 12</button>
+                <button>Lecture 13</button>
+                <button>Lecture 14</button>
+                <button>Lecture 15</button>
+            </div>
+            <button onclick="showLectures('kinematics')">Kinematics</button>
+            <div id="kinematics" class="lecture-buttons">
+                <!-- Add lecture buttons for Kinematics here -->
+            </div>
+            <button onclick="showLectures('newton-laws')">Newton's Laws of Motion</button>
+            <div id="newton-laws" class="lecture-buttons">
+                <!-- Add lecture buttons for Newton's Laws of Motion here -->
+            </div>
+            <button onclick="showLectures('friction')">Friction</button>
+            <div id="friction" class="lecture-buttons">
+                <!-- Add lecture buttons for Friction here -->
+            </div>
+            <button onclick="showLectures('circular-motion')">Circular Motion</button>
+            <div id="circular-motion" class="lecture-buttons">
+                <!-- Add lecture buttons for Circular Motion here -->
+            </div>
+            <button onclick="showLectures('work-power-energy')">Work Power Energy</button>
+            <div id="work-power-energy" class="lecture-buttons">
+                <!-- Add lecture buttons for Work Power Energy here -->
+            </div>
+            <button onclick="showLectures('centre-of-mass')">Centre of Mass</button>
+            <div id="centre-of-mass" class="lecture-buttons">
+                <!-- Add lecture buttons for Centre of Mass here -->
+            </div>
+            <button onclick="showLectures('rotational-dynamics')">Rotational Dynamics</button>
+            <div id="rotational-dynamics" class="lecture-buttons">
+                <!-- Add lecture buttons for Rotational Dynamics here -->
+            </div>
+            <button onclick="showLectures('thermal-property')">Thermal Property Of Matter</button>
+            <div id="thermal-property" class="lecture-buttons">
+                <!-- Add lecture buttons for Thermal Property Of Matter here -->
+            </div>
+            <button onclick="showLectures('kinetic-theory')">Kinetic Theory of Gases</button>
+            <div id="kinetic-theory" class="lecture-buttons">
+                <!-- Add lecture buttons for Kinetic Theory of Gases here -->
+            </div>
+            <button onclick="showLectures('thermodynamics')">Thermodynamics</button>
+            <div id="thermodynamics" class="lecture-buttons">
+                <!-- Add lecture buttons for Thermodynamics here -->
+            </div>
+            <button onclick="showLectures('fluid-mechanics')">Fluid Mechanics</button>
+            <div id="fluid-mechanics" class="lecture-buttons">
+                <!-- Add lecture buttons for Fluid Mechanics here -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        © 2024 Physics Class 11
+    </footer>
+    <script>
+        function showLectures(chapterId) {
+            // Hide all lecture buttons
+            const lectureDivs = document.querySelectorAll('.lecture-buttons');
+            lectureDivs.forEach(div => div.style.display = 'none');
+
+            // Show the selected chapter's lecture buttons
+            document.getElementById(chapterId).style.display = 'flex';
+        }
+    </script>
+</body>
+              </html>
